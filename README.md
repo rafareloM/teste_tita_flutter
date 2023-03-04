@@ -1,5 +1,5 @@
 # Desafio Flutter TiTa Therapy
-O desafio consiste em criar ma lista de botões e a partir dela, ser direcionado uma página com o título e cor de fundo correspondente à cor selecionada. 
+O desafio consiste em criar uma lista de botões e a partir dela, ser direcionado uma página com o título e cor de fundo correspondente à cor selecionada. 
 
 ![image](https://user-images.githubusercontent.com/86268949/222878333-4fd8f47b-af85-4db0-a57f-1e48ad8be391.png) ![image](https://user-images.githubusercontent.com/86268949/222878343-4612220a-9653-4d3f-a002-46c116a7c7f3.png)
 
@@ -32,13 +32,13 @@ A partir daí eu modifiquei o arquivo main do projeto. Modifiquei o Scaffold dei
 Dentro da pasta components criei um novo arquivo (color_button.dart) e nele criei um novo Widget Stateless chamado ColorButton.
 #### ColorButton: 
 Widget customizado, que recebe 4 parâmentros:
+
 ~~~~dart
   final void Function() onPressed;
   final Color color;
   final String colorName;
   final Color? textColor;
 ~~~~~
-
 
 + OnPressed: Parâmetro do tipo void Function responsável por alimentar a função requerida no FilledButton do widget.
 + Color: Tipo Color responsável por definir a cor de fundo do Botão.
@@ -49,19 +49,22 @@ Widget customizado, que recebe 4 parâmentros:
 Dentro da pasta view criei um novo arquivo (color_page.dart) e nele criei um novo widget Stateless chamado ColorPage.
 #### ColorPage:
 Widget que serve como uma nova página, contendo um Scaffold e uma AppBar, dentro do body do Scaffold terá uma foto carregada da internet ou assets da aplicação. Recebe quatro parâmetros:
+
 ~~~~dart
   final String colorName;
   final Color color;
   final String path;
   final bool useAssets;
 ~~~~~
+
 + colorName: Tipo String que define o title da appBar.
 + color: Tipo color que define a cor de fundo do Scaffold.
 + path: Tipo String que define o caminho para a imagem do Scaffold.
 + useAssets: Tipo booleano que serve para decidir se o provedor da imagem será Image.assets ou Image.network.
 
 * ### Pasta src:
-Adição de imagens dentro da pasta img. Para usar as imagens baixadas, é necessário configurar o arquivo pubspec.yaml com o seguinte código:
+Adição de imagens dentro da pasta img. Para usar as imagens baixadas, é necessário configurar o arquivo `pubspec.yaml` com o seguinte código:
+
 ~~~~yaml
 assets:
 
