@@ -6,13 +6,16 @@ class ColorPage extends StatelessWidget {
 
   final Color color;
 
-  final String uri;
+  final String path;
+
+  final bool useAssets;
 
   const ColorPage({
     super.key,
     required this.colorName,
     required this.color,
-    required this.uri,
+    required this.path,
+    required this.useAssets,
   });
 
   @override
@@ -67,10 +70,12 @@ class ColorPage extends StatelessWidget {
       body: Center(
         child: SizedBox(
           width: double.maxFinite,
-          child: Image.network(
-            uri,
-            fit: BoxFit.fitWidth,
-          ),
+          child: useAssets
+              ? Image.asset(path)
+              : Image.network(
+                  path,
+                  fit: BoxFit.fitWidth,
+                ),
         ),
       ),
     );

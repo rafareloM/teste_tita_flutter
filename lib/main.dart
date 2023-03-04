@@ -44,9 +44,11 @@ class MyHomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const ColorPage(
-                            colorName: 'Azul',
-                            color: Colors.blueAccent,
-                            uri: Constants.blueUrl),
+                          colorName: 'Azul',
+                          color: Colors.blueAccent,
+                          path: Constants.blueUrl,
+                          useAssets: true,
+                        ),
                       ));
                 },
                 color: Colors.blueAccent,
@@ -57,9 +59,11 @@ class MyHomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const ColorPage(
-                            colorName: 'Vermelho',
-                            color: Colors.redAccent,
-                            uri: Constants.redUrl),
+                          colorName: 'Vermelho',
+                          color: Colors.redAccent,
+                          useAssets: true,
+                          path: Constants.redPath,
+                        ),
                       ));
                 },
                 color: Colors.redAccent,
@@ -70,9 +74,11 @@ class MyHomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => const ColorPage(
-                            colorName: 'Amarelo',
-                            color: Colors.amberAccent,
-                            uri: Constants.yellowUrl),
+                          colorName: 'Amarelo',
+                          color: Colors.amberAccent,
+                          useAssets: true,
+                          path: Constants.yellowPath,
+                        ),
                       ));
                 },
                 color: Colors.amberAccent,
@@ -83,9 +89,11 @@ class MyHomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => ColorPage(
-                            colorName: 'Verde',
-                            color: Colors.green[800]!,
-                            uri: Constants.greenUrl),
+                          colorName: 'Verde',
+                          color: Colors.green[800]!,
+                          useAssets: true,
+                          path: Constants.greenPath,
+                        ),
                       ));
                 },
                 color: Colors.green[800]!,
