@@ -5,12 +5,14 @@ class ColorButton extends StatelessWidget {
   final void Function() onPressed;
   final Color color;
   final String colorName;
+  final Color? textColor;
 
   const ColorButton({
     Key? key,
     required this.onPressed,
     required this.color,
     required this.colorName,
+    this.textColor,
   }) : super(key: key);
 
   @override
@@ -23,7 +25,10 @@ class ColorButton extends StatelessWidget {
             fixedSize: MaterialStateProperty.all(const Size.fromHeight(24)),
             backgroundColor: MaterialStateColor.resolveWith((states) => color)),
         onPressed: onPressed,
-        child: Text(colorName),
+        child: Text(
+          colorName,
+          style: TextStyle(color: textColor ?? Colors.white),
+        ),
       ),
     );
   }

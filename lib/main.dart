@@ -30,7 +30,10 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.purple[100],
-        title: const Text('TiTa Therapy'),
+        title: const Text(
+          'TiTa Therapy',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(
@@ -47,7 +50,7 @@ class MyHomePage extends StatelessWidget {
                           colorName: 'Azul',
                           color: Colors.blueAccent,
                           path: Constants.blueUrl,
-                          useAssets: true,
+                          useAssets: false,
                         ),
                       ));
                 },
@@ -69,20 +72,22 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.redAccent,
                 colorName: 'Vermelho'),
             ColorButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ColorPage(
-                          colorName: 'Amarelo',
-                          color: Colors.amberAccent,
-                          useAssets: true,
-                          path: Constants.yellowPath,
-                        ),
-                      ));
-                },
-                color: Colors.amberAccent,
-                colorName: 'Amarelo'),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ColorPage(
+                        colorName: 'Amarelo',
+                        color: Colors.amberAccent,
+                        useAssets: true,
+                        path: Constants.yellowPath,
+                      ),
+                    ));
+              },
+              color: Colors.amberAccent,
+              colorName: 'Amarelo',
+              textColor: Colors.black,
+            ),
             ColorButton(
                 onPressed: () {
                   Navigator.push(
